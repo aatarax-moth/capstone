@@ -11,13 +11,13 @@
     text-decoration: none;
     color: #4E615C;
     font-size: 18px;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     transition: all 0.3s ease;
     font-weight: 500;
 }
 
 .nav ul li a:hover {
-    border-bottom: 1px solid #4E615C;
+    border-bottom: 2px solid #4E615C;
     transform: scale(1.1);
 }
 

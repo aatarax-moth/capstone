@@ -1,0 +1,42 @@
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color:rgba(223, 223, 223, 0.397);
+    padding: 4rem 2rem;
+}
+
+.four-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.testimonials .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(204, 204, 204, 0.2);
+    padding: 1rem;
+    aspect-ratio: 1/1;
+    font-weight: 500;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 1rem;
+    font-size: 18px;
+}
+
+.testimonial .rate {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 1rem;
+    width: 30px;
+    height: 30px;
+    background-image:url(/public/thumbsup.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,6 +1,8 @@
-import Header from './components/header.js';
+import Hero from './components/hero.js';
 import Nav from './components/nav.js';
-import Main from './components/main.js';
+import Menu from './components/menu.js';
+import Testimonials from './components/testimonials.js';
+import About from './components/about.js';
 import Footer from './components/footer.js';
 import './App.css';
 
@@ -9,8 +11,10 @@ function App() {
     <>
       <div className="App">
         <Nav/>
-        <Header/>
-        <Main/>
+        <Hero/>
+        <Menu/>
+        <Testimonials/>
+        <About/>
         <Footer/>
       </div>
     </>
