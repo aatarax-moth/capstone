@@ -1,5 +1,6 @@
 import './nav.css';
 import Container from './container.js';
+import { Link } from 'react-router-dom';
 
 function Nav() {
     return (
@@ -7,7 +8,9 @@ function Nav() {
             <Container>
                 <div className="nav">
                     <div>
+                    <Link to="/">
                     <img src="/Logo.svg" alt="Logo" className="logo"/>
+                    </Link>
                     </div>
                     <ul>
                         <li><a href="#home">Home</a></li>
