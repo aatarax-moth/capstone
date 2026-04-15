@@ -1,5 +1,6 @@
 import './footer.css';
 import Container from './container.js';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -16,9 +17,11 @@ function Footer() {
                         <li><a href="#login">Login</a></li>
                     </ul>
                 </div>
+                <Link to="/">
                 <div>
                     <img src="/Logo.svg" alt="Logo" className="logo"/>
                 </div>
+                </Link>
             </div>
             </Container>
         </footer>
