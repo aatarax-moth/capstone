@@ -2,11 +2,11 @@ import './bookingpage.css';
 import BookingForm from './bookingform.js';
 import BookingHero from './bookinghero.js';
 
-function BookingPage() {
+function BookingPage({availableTimes, setAvailableTimes}) {
     return (
         <div className="bookingpage">
             <BookingHero/>
-            <BookingForm/>
+            <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes}/>
         </div>
     );
 }
