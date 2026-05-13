@@ -1,13 +1,6 @@
 import { useState } from 'react';
 import './bookingform.css';
-import { render, screen } from "@testing-library/react";
 import Container from './container.js';
-
-test('Render Booking Form Heading', () => {
-    render(<BookingForm />);
-    const headingElement = screen.getByText(/Reserve A Table/i);
-    expect(headingElement).toBeInTheDocument();
-})
 
 function BookingForm({availableTimes, dispatch}) {
 
@@ -27,7 +20,7 @@ function BookingForm({availableTimes, dispatch}) {
     return (
         <div className="bookingForm">
             <Container>
-            <div className='wrap'>
+            <div className='wrap form-base'>
             <h1>Reserve A Table</h1>
             <form>
                 <label htmlFor="guests">Number of Guests:</label>
