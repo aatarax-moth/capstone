@@ -13,7 +13,7 @@ form {
 
 form input,
 form select {
-    padding: 0.5em;
+    padding: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
@@ -34,23 +34,34 @@ form select {
 }
 
 .submit-btn {
-    background-color: #4E615C;
+    background-color: #f4ce14;
     color: #fff;
     border: none;
     padding: 0.75em;
+    margin-top: 2rem;
     border-radius: 4px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.bookingform .wrap {
-    background-color: #4E615C;
-    padding: 4rem;
-    border-radius: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: fit-content;
-    align-self: center;
-    justify-self: center;
-    min-width: 700px;
+.submit-btn:hover {
+    background-color: #e0b10f;
+}
+
+.bookingForm .wrap {
+    width: 100%;
+    justify-content: space-between;
+    padding: 4rem 0;
+    margin: 4rem 0;
+    background-color: #eceaea;
+    border-radius: 5rem;
+}
+
+.form-base {
+    width: 100%;
+    justify-content: space-between;
+    padding: 4rem 0;
+    margin: 4rem 0;
+    border-radius: 5rem;
 }
