@@ -15,7 +15,12 @@ export const updateTimes = (state, action) => {
 
 
 export const initializeTimes = () => {
-    const availableTimes = fetchData(date);
+
+    //create new date object to present current time
+    const today = new Date();
+    //pass new const to fetchData
+    const availableTimes = fetchData(today);
+    //return it
     return availableTimes;
 }
 
