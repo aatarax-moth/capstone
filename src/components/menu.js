@@ -8,7 +8,7 @@ function Menu() {
       <Container>
         <h2>Menu</h2>
         <p>Our menu features a variety of dishes designed to cater to every palate, from comforting classics to innovative seasonal specials. Whether you’re stopping by for a quick lunch, a cozy dinner, or a relaxed weekend brunch, our warm and inviting atmosphere is the perfect backdrop for enjoying great food with friends and family. Come and experience the taste of Little Lemon, where every meal is crafted with love and care!</p>
-        <Button text="View Menu"/>
+        <button aria-label="On Click"  text="View Menu"/>
 
         <div className="triple-grid">
             <div className="menu-item">

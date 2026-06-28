@@ -2,7 +2,7 @@ import './button.css';
 
 function Button(props) {
     return (
-        <button className="button">{props.text}</button>
+        <button aria-label="On Click"  className="button">{props.text}</button>
     );  
 }   
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './bookingform.css';
 import Container from './container.js';
 
-function BookingForm({availableTimes, dispatch}) {
+function BookingForm({availableTimes, dispatch, onSubmit}) {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -17,12 +17,34 @@ function BookingForm({availableTimes, dispatch}) {
         dispatch({ type: 'UPDATE_TIMES', payload: selectedDate });
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const formData = {
+            name,
+            email,
+            date,
+            time,
+            guests,
+            occasion
+        };
+        onSubmit(formData);
+    };
+
+    const getTodayDateString = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
     return (
         <div className="bookingForm">
             <Container>
             <div className='wrap form-base'>
             <h1>Reserve A Table</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="guests">Number of Guests:</label>
                 <select id="guests" name="guests" value={guests} onChange={(e) => setGuests(e.target.value)} required>
                     <option value="">Select...</option>
@@ -38,7 +60,7 @@ function BookingForm({availableTimes, dispatch}) {
                     <option value="10">10 Guests</option>
                 </select>
                 <label htmlFor="name">Name:</label>
-                <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)}required />
+                <input type="text" id="name" name="name" minLength="2" value={name} onChange={(e) => setName(e.target.value)}required />
                 <label htmlFor="email">Email:</label>
                 <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <label htmlFor="guests">Occasion:</label>
@@ -57,6 +79,7 @@ function BookingForm({availableTimes, dispatch}) {
                 name="date"
                 value={date}
                 onChange={handleDateChange}
+                min={getTodayDateString()}
                 required />
                 <label htmlFor="time">Time:</label>
                 <select
@@ -70,7 +93,7 @@ function BookingForm({availableTimes, dispatch}) {
                         <option key={t} value={t}>{t}</option>
                     ))}
                 </select>
-                <button className="submit-btn" type="submit" value="Reserve">Submit</button>
+                <button aria-label="On Click"  className="submit-btn" type="submit" value="Reserve">Submit</button>
             </form>
             </div>
             </Container>

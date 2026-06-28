@@ -1,0 +1,18 @@
+.confirmed-booking {
+    margin-top:2rem;
+    margin-bottom:4rem;
+    min-height:450px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: #f4ce14;
+    padding: 1rem;
+    color: #fff;
+    border:none;
+    border-radius: 12px;
+    font-weight:600;
+}
